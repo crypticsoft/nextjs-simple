@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Form from '../../third-party/kwes-react-form/dist/entry-form';
-import { Builder } from '@builder.io/react';
+import { useIsPreviewing } from '@builder.io/react';
 
 import kwesforms from 'kwesforms';
 import PropTypes from 'prop-types';
@@ -31,6 +31,8 @@ const getData = (url) => {
 
 const FormLoader = ({ id, data, action, handler }) => {
   const [formData, setFormData] = useState({});
+
+  const isPreviewing = useIsPreviewing();
   const isValidUrl = urlString =>{
     var inputElement = document.createElement('input');
     inputElement.type = 'url';
@@ -57,7 +59,7 @@ const FormLoader = ({ id, data, action, handler }) => {
       }
 
       // only initialize kwesforms if we're not in preview mode
-      if (!Builder.isPreviewing || !Builder.isEditing) {
+      if (!isPreviewing) {
         setTimeout(() => {
           kwesforms.init();
         }, 500);
