@@ -1,0 +1,104 @@
+.inverse a,
+.inverse a:visited,
+.inverse a:hover {
+  color: rgba(255, 255, 255, 90%);
+}
+
+.border--rounded {
+  border-radius: 1rem;
+  margin-top: -74px !important;
+  width: calc(100% + 64px) !important;
+  padding: 42px 32px 32px;
+}
+
+.bg--radial-gradient {
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    rgba(139, 0, 255, 1) 0%,
+    rgb(21, 0, 36) 100%
+  );
+}
+
+.bg--gradient {
+  background: rgb(21, 0, 36);
+  background: linear-gradient(
+    302deg,
+    rgba(21, 0, 36, 0.9934174353335085) 0%,
+    rgba(121, 9, 74, 1) 35%,
+    rgba(139, 0, 255, 1) 100%
+  );
+}
+
+.inverse {
+  color: #fff;
+}
+
+/* web basic */
+.kwes-form {
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --kwes-form--label-color: #666;
+  --kwes-form--button-bg-color: #1e88e5;
+}
+.kwes-form  fieldset {
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-left: 0;
+}
+
+.kwes-form legend
+{
+  width: 100%;
+  margin-bottom: 0 !important;
+  position: relative;
+}
+
+.kwes-form .h2 {
+  display: inline-block;
+  text-align: center;
+  font-family: "Signika","Helvetica-Neue","Arial",sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.kwes-form .columns:first-child .column {
+  padding-bottom: 0;
+}
+
+.kwes-form .button.is-primary {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: auto;
+}
+
+.kwes-form .input, .kwes-form .textarea, .kwes-form .select select {
+  background-color: #fff;
+  border-color: #e8e8e8;
+}
+
+#get-in-touch .kwes-form {
+  --kwes-form-box-shadow: none;
+  --kwes-form-bg-color: #fff;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .kwes-form {
+    padding: 15px;
+  }
+
+  .kwes-form  h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 15px auto;
+  }
+
+}
